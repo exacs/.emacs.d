@@ -46,7 +46,8 @@
 ;; And require the modules...
 (add-to-list 'load-path (expand-file-name "settings" user-emacs-directory))
 (require 'install-packages)
-
+(require 'package-which-key)
+(require 'package-doom-themes)
 
 ;;;; THE FOLLOWING LINES ARE ADDED AUTOMATICALLY AT THE END
 ;;;; ======================================================
