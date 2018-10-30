@@ -48,6 +48,7 @@
 (require 'install-packages)
 (require 'package-which-key)
 (require 'package-doom-themes)
+(require 'package-swiper)
 
 ;;;; THE FOLLOWING LINES ARE ADDED AUTOMATICALLY AT THE END
 ;;;; ======================================================
