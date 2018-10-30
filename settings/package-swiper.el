@@ -5,6 +5,7 @@
   :ensure t
   :init
   (ivy-mode 1)
+  (setq ivy-format-function 'ivy-format-function-arrow)
   :bind (("C-s" . 'swiper)
 	 ;; ("M-x" . 'counsel-M-x)
 	 ("C-x C-f" .'counsel-find-file)))

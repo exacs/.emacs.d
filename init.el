@@ -45,12 +45,12 @@
 ;; Add that directory to the load-path
 ;; And require the modules...
 (add-to-list 'load-path (expand-file-name "settings" user-emacs-directory))
+(require 'extra-configuration)
 (require 'keyboard-modifiers)
 (require 'install-packages)
 (require 'package-which-key)
 (require 'package-doom-themes)
 (require 'package-swiper)
-
 (require 'mode-mappings)
 
 ;;;; THE FOLLOWING LINES ARE ADDED AUTOMATICALLY AT THE END
