@@ -1,5 +1,20 @@
+;;;; GLOBAL CONFIGURATION
+;;;; ====================
+;; Configuration that is independent from any package, language, etc. There is
+;; no criteria or way to group them.
+
+;; UTF-8 please
+(setq locale-coding-system 'utf-8) ; pretty
+(set-terminal-coding-system 'utf-8) ; pretty
+(set-keyboard-coding-system 'utf-8) ; pretty
+(set-selection-coding-system 'utf-8) ; please
+(prefer-coding-system 'utf-8) ; with sugar on top
+
 ;; Allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)
+
+;; Lines should be 80 characters wide, not 72
+(setq fill-column 80)
 
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
@@ -15,8 +30,6 @@
 (setq delete-by-moving-to-trash t)
 
 ;; Real emacs knights don't use shift to mark things
-;; > Jesus, I'm still an emacs pawn
-;; > Ok. You win. Shift is binded to other functions
 (setq shift-select-mode nil)
 
 ;; Transparently open compressed files
@@ -27,13 +40,6 @@
 
 ;; Answering just 'y' or 'n' will do
 (defalias 'yes-or-no-p 'y-or-n-p)
-
-;; UTF-8 please
-(setq locale-coding-system 'utf-8) ; pretty
-(set-terminal-coding-system 'utf-8) ; pretty
-(set-keyboard-coding-system 'utf-8) ; pretty
-(set-selection-coding-system 'utf-8) ; please
-(prefer-coding-system 'utf-8) ; with sugar on top
 
 ;; Show active region
 (transient-mark-mode 1)
@@ -51,9 +57,6 @@
 ;; Always display line and column numbers
 (setq line-number-mode t)
 (setq column-number-mode t)
-
-;; Lines should be 80 characters wide, not 72
-(setq fill-column 80)
 
 ;; Save a list of recent files visited. (open recent file with C-x f)
 (recentf-mode 1)
@@ -78,10 +81,6 @@
 ;; Don't break lines for me, please
 (setq-default truncate-lines t)
 
-;; Keep cursor away from edges when scrolling up/down
-;; > Hmm... let's think if this is practical or not
-;; (require 'smooth-scrolling)
-
 ;; Allow recursive minibuffers
 (setq enable-recursive-minibuffers t)
 
@@ -94,20 +93,11 @@
 ;; Fontify org-mode code blocks
 (setq org-src-fontify-natively t)
 
-;; Represent undo-history as an actual tree (visualize with C-x u)
-(setq undo-tree-mode-lighter "")
-(require 'undo-tree)
-(global-undo-tree-mode)
-
 ;; Sentences do not need double spaces to end. Period.
 (set-default 'sentence-end-double-space nil)
 
 ;; 80 chars is a good width.
 (set-default 'fill-column 80)
-
-;; Add parts of each file's directory to the buffer name if not unique
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
 
 ;; A saner ediff
 (setq ediff-diff-options "-w")
@@ -144,4 +134,4 @@
 
 (add-to-list 'find-file-not-found-functions 'my-create-non-existent-directory)
 
-(provide 'extra-configuration)
+(provide 'settings-global)
