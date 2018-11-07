@@ -1,4 +1,7 @@
-;;;; Install packages
+;;;; PACKAGES CONFIGURATION
+;;;; ======================
+;; Configuration specific for packages. Everything starts with `use-package`
+
 (use-package magit
   :ensure t
   :bind (("C-x g" . 'magit-status)))
@@ -12,7 +15,6 @@
   :ensure t
   :config
   (global-whitespace-cleanup-mode))
-(provide 'install-packages)
 
 (use-package doom-themes
   :ensure t
@@ -24,7 +26,6 @@
   :ensure t
   :init
   (which-key-mode 1))
-
 
 (use-package ido :ensure t
   :init
@@ -42,6 +43,16 @@
   (ido-everywhere 1)
   (ido-ubiquitous-mode 1))
 
+(use-package move-text :ensure t
+  :config
+  :bind (("<C-S-down>" . 'move-text-down)
+         ("<C-S-up>" . 'move-text-up)))
+
+
+(use-package multiple-cursors :ensure t
+  :config
+  :bind (("C-S-SPC" . 'set-rectangular-region-anchor)))
+
 ;; Represent undo-history as an actual tree (visualize with C-x u)
 (setq undo-tree-mode-lighter "")
 (require 'undo-tree)
@@ -51,3 +62,5 @@
 ;; Add parts of each file's directory to the buffer name if not unique
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
+
+(provide 'settings-packages)

@@ -70,10 +70,10 @@
 (winner-mode 1)
 
 ;; Never insert tabs
-(set-default 'indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 ;; Show me empty lines after buffer end
-(set-default 'indicate-empty-lines t)
+(setq-default indicate-empty-lines t)
 
 ;; Easily navigate sillycased words
 (global-subword-mode 1)
@@ -94,10 +94,10 @@
 (setq org-src-fontify-natively t)
 
 ;; Sentences do not need double spaces to end. Period.
-(set-default 'sentence-end-double-space nil)
+(setq-default sentence-end-double-space nil)
 
 ;; 80 chars is a good width.
-(set-default 'fill-column 80)
+(setq-default fill-column 80)
 
 ;; A saner ediff
 (setq ediff-diff-options "-w")

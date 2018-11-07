@@ -14,4 +14,4 @@
   :mode (("\\.groovy$" . groovy-mode)
          ("\\.gradle" . groovy-mode)))
 
-(provide 'mode-mappings)
+(provide 'settings-languages)

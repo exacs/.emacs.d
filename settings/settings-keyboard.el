@@ -15,4 +15,4 @@
 (global-set-key (kbd "<S-up>") 'windmove-up)
 (global-set-key (kbd "<S-down>") 'windmove-down)
 
-(provide 'keyboard-modifiers)
+(provide 'settings-keyboard)
