@@ -14,4 +14,17 @@
   :mode (("\\.groovy$" . groovy-mode)
          ("\\.gradle" . groovy-mode)))
 
+(use-package web-mode
+  :ensure t
+  :commands (web-mode)
+  :init
+  (setq-default web-mode-enable-auto-quoting nil)
+  (setq-default web-mode-attr-indent-offset 2)
+  (setq-default web-mode-markup-indent-offset 2)
+  (setq-default web-mode-css-indent-offset 2)
+  (setq-default web-mode-code-indent-offset 2)
+  :mode (("\\.js$" . web-mode)
+         ("\\.jsx$" . web-mode)
+         ("\\.json$" . web-mode)))
+
 (provide 'settings-languages)
