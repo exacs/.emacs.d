@@ -45,6 +45,7 @@
 ;; Add that directory to the load-path and require the modules...
 (add-to-list 'load-path (expand-file-name "settings" user-emacs-directory))
 (require 'settings-global)
+(require 'settings-appearance)
 (require 'settings-keyboard)
 (require 'settings-packages)
 (require 'settings-languages)
