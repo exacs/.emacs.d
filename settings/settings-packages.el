@@ -48,16 +48,19 @@
   :bind (("<C-S-down>" . 'move-text-down)
          ("<C-S-up>" . 'move-text-up)))
 
+(use-package smex :ensure t
+  :config
+  :bind (("M-x" . 'smex)))
 
 (use-package multiple-cursors :ensure t
   :config
   :bind (("C-S-SPC" . 'set-rectangular-region-anchor)))
 
+
 ;; Represent undo-history as an actual tree (visualize with C-x u)
 (setq undo-tree-mode-lighter "")
 (require 'undo-tree)
 (global-undo-tree-mode)
-
 
 ;; Add parts of each file's directory to the buffer name if not unique
 (require 'uniquify)
