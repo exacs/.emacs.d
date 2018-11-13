@@ -134,4 +134,9 @@
 
 (add-to-list 'find-file-not-found-functions 'my-create-non-existent-directory)
 
+;; Set up directory for backups here (in this .emacs.d)
+(setq backup-directory-alist
+      `(("." . ,(expand-file-name
+                 (concat user-emacs-directory "backups")))))
+
 (provide 'settings-global)
