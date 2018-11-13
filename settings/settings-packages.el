@@ -9,6 +9,8 @@
   (global-auto-revert-mode 1)
   :delight auto-revert-mode)
 
+(use-package delight :ensure t)
+
 (use-package doom-themes :ensure t
   :config
   (load-theme 'doom-molokai t)
@@ -76,7 +78,8 @@
 
 (use-package which-key :ensure t
   :config
-  (which-key-mode 1))
+  (which-key-mode 1)
+  :delight)
 
 (use-package whitespace-cleanup-mode :ensure t
   :config
