@@ -11,6 +11,13 @@
 (use-package expand-region :ensure t
   :bind (("C-=" . 'er/expand-region)))
 
+(use-package flx-ido :ensure t
+  :after (ido)
+  :init
+  (setq ido-enable-flex-matching t)
+  :config
+  (flx-ido-mode 1))
+
 (use-package ido :ensure t
   :config
   (ido-mode t))
