@@ -6,27 +6,27 @@
   (load-theme 'doom-molokai t)
   (doom-themes-visual-bell-config))
 
-(use-package evil :ensure t
-  :init)
+(use-package evil :ensure t)
 
 (use-package expand-region :ensure t
   :bind (("C-=" . 'er/expand-region)))
 
 (use-package ido :ensure t
-  :init
+  :config
   (ido-mode t))
 
 (use-package ido-completing-read+ :ensure t
   :after (ido)
-  :init
+  :config
   (ido-everywhere 1)
   (ido-ubiquitous-mode 1))
 
 (use-package ido-vertical-mode :ensure t
   :after (ido)
   :init
-  (ido-vertical-mode 1)
-  (setq ido-vertical-define-keys 'C-n-C-p-up-and-down))
+  (setq ido-vertical-define-keys 'C-n-C-p-up-and-down)
+  :config
+  (ido-vertical-mode 1))
 
 (use-package magit :ensure t
   :bind (("C-x g" . 'magit-status)))
@@ -41,7 +41,7 @@
   :bind (("C-S-SPC" . 'set-rectangular-region-anchor)))
 
 (use-package projectile :ensure t
-  :init
+  :config
   (projectile-mode 1)
   (projectile-register-project-type 'npm '("package.json")
                   :compile "npm install"
@@ -50,12 +50,12 @@
   :bind-keymap ("C-c p" . projectile-command-map))
 
 (use-package smex :ensure t
-  :init
+  :config
   (smex-initialize)
   :bind (("M-x" . 'smex)))
 
 (use-package undo-tree :ensure t
-  :config
+  :init
   (global-undo-tree-mode 1))
 
 (use-package which-key :ensure t
