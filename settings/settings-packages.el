@@ -1,6 +1,14 @@
 ;;;; PACKAGES CONFIGURATION
 ;;;; ======================
 ;; Configuration specific for packages. Everything starts with `use-package`
+(use-package autorevert
+  :init
+  (setq global-auto-revert-non-file-buffers t)
+  (setq auto-revert-verbose nil)
+  :config
+  (global-auto-revert-mode 1)
+  :delight auto-revert-mode)
+
 (use-package doom-themes :ensure t
   :config
   (load-theme 'doom-molokai t)
