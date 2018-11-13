@@ -46,6 +46,7 @@
   (ido-vertical-mode 1))
 
 (use-package magit :ensure t
+  :config
   :bind (("C-x g" . 'magit-status)))
 
 (use-package move-text :ensure t
@@ -65,7 +66,8 @@
                   :test "npm test"
                   :run "npm start")
   :bind-keymap ("C-c p" . projectile-command-map)
-  :bind (("C-x o" . 'projectile-find-file)))
+  :bind (("C-x o" . 'projectile-find-file))
+  :delight '(:eval (concat " [" (projectile-project-name) "]")))
 
 (use-package smex :ensure t
   :config
@@ -83,7 +85,8 @@
 
 (use-package whitespace-cleanup-mode :ensure t
   :config
-  (global-whitespace-cleanup-mode))
+  (global-whitespace-cleanup-mode)
+  :delight)
 
 (use-package zoom-frm
   :load-path "manually-downloaded/"

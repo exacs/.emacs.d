@@ -1,3 +1,7 @@
+(use-package elisp-mode
+  :mode (("\\.el\\$" . elisp-mode))
+  :delight eldoc-mode)
+
 (use-package markdown-mode
   :ensure t
   :commands (markdown-mode gfm-mode)
