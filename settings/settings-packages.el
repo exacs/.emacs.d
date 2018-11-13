@@ -54,7 +54,8 @@
                   :compile "npm install"
                   :test "npm test"
                   :run "npm start")
-  :bind-keymap ("C-c p" . projectile-command-map))
+  :bind-keymap ("C-c p" . projectile-command-map)
+  :bind (("C-x o" . 'projectile-find-file)))
 
 (use-package smex :ensure t
   :config
