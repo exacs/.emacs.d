@@ -71,11 +71,11 @@
   :bind (("M-x" . 'smex)))
 
 (use-package undo-tree :ensure t
-  :init
+  :config
   (global-undo-tree-mode 1))
 
 (use-package which-key :ensure t
-  :init
+  :config
   (which-key-mode 1))
 
 (use-package whitespace-cleanup-mode :ensure t
