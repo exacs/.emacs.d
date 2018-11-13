@@ -1,6 +1,8 @@
 ;;;; PACKAGES CONFIGURATION
 ;;;; ======================
 ;; Configuration specific for packages. Everything starts with `use-package`
+(use-package evil :ensure t
+  :init)
 
 (use-package magit
   :ensure t
