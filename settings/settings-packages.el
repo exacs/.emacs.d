@@ -55,6 +55,12 @@
   (smex-initialize)
   :bind (("M-x" . 'smex)))
 
+(use-package projectile :ensure t
+  :init
+  (projectile-mode 1)
+  :bind-keymap ("C-c p" . projectile-command-map))
+
+
 (use-package expand-region :ensure t
   :bind (("<C-=>" . 'er/expand-region)))
 
