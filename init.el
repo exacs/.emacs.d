@@ -18,9 +18,6 @@
 ;; Turn off "Welcome to emacs" screen
 (setq inhibit-startup-message t)
 
-;; Maximize
-(toggle-frame-maximized)
-
 ;;; Setup package-managers
 ;;; ----------------------
 (require 'package)
@@ -49,6 +46,8 @@
 (require 'settings-keyboard)
 (require 'settings-packages)
 (require 'settings-languages)
+
+(add-to-list 'load-path (expand-file-name "manually-downloaded" user-emacs-directory))
 
 ;;;; THE FOLLOWING LINES ARE ADDED AUTOMATICALLY AT THE END
 ;;;; ======================================================
