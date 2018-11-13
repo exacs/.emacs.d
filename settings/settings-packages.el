@@ -58,6 +58,10 @@
 (use-package projectile :ensure t
   :init
   (projectile-mode 1)
+  (projectile-register-project-type 'npm '("package.json")
+                  :compile "npm install"
+                  :test "npm test"
+                  :run "npm start")
   :bind-keymap ("C-c p" . projectile-command-map))
 
 
