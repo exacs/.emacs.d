@@ -1,8 +1,7 @@
 ;;;; PACKAGES CONFIGURATION
 ;;;; ======================
 ;; Configuration specific for packages. Everything starts with `use-package`
-(use-package doom-themes
-  :ensure t
+(use-package doom-themes :ensure t
   :config
   (load-theme 'doom-molokai t)
   (doom-themes-visual-bell-config))
@@ -29,8 +28,7 @@
   (ido-vertical-mode 1)
   (setq ido-vertical-define-keys 'C-n-C-p-up-and-down))
 
-(use-package magit
-  :ensure t
+(use-package magit :ensure t
   :bind (("C-x g" . 'magit-status)))
 
 (use-package move-text :ensure t
@@ -56,18 +54,15 @@
   (smex-initialize)
   :bind (("M-x" . 'smex)))
 
-(use-package undo-tree
-  :ensure t
+(use-package undo-tree :ensure t
   :config
   (global-undo-tree-mode 1))
 
-(use-package which-key
-  :ensure t
+(use-package which-key :ensure t
   :init
   (which-key-mode 1))
 
-(use-package whitespace-cleanup-mode
-  :ensure t
+(use-package whitespace-cleanup-mode :ensure t
   :config
   (global-whitespace-cleanup-mode))
 
