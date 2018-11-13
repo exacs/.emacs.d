@@ -61,6 +61,10 @@
   :config
   :bind (("C-S-SPC" . 'set-rectangular-region-anchor)))
 
+(use-package zoom-frm
+  :bind (("C-x +" . 'zoom-in)
+         ("C-x -" . 'zoom-out)))
+
 
 ;; Represent undo-history as an actual tree (visualize with C-x u)
 (setq undo-tree-mode-lighter "")
