@@ -66,7 +66,7 @@
 
 
 (use-package expand-region :ensure t
-  :bind (("<C-=>" . 'er/expand-region)))
+  :bind (("C-=" . 'er/expand-region)))
 
 (use-package multiple-cursors :ensure t
   :config
