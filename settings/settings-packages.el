@@ -62,6 +62,7 @@
   :bind (("C-S-SPC" . 'set-rectangular-region-anchor)))
 
 (use-package zoom-frm
+  :load-path "manually-downloaded/"
   :bind (("C-x +" . 'zoom-in)
          ("C-x -" . 'zoom-out)))
 
