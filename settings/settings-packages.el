@@ -51,7 +51,8 @@
          ("<C-S-up>" . 'move-text-up)))
 
 (use-package smex :ensure t
-  :config
+  :init
+  (smex-initialize)
   :bind (("M-x" . 'smex)))
 
 (use-package expand-region :ensure t
