@@ -15,4 +15,8 @@
 (global-set-key (kbd "<S-up>") 'windmove-up)
 (global-set-key (kbd "<S-down>") 'windmove-down)
 
+;; Go hardcore without "classic" keybindings
+(global-unset-key (kbd "<home>"))
+(global-unset-key (kbd "<end>"))
+
 (provide 'settings-keyboard)
