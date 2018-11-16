@@ -1,3 +1,5 @@
+(load-theme 'molokai t)
+
 (setq visible-bell nil)
 (setq ring-bell-function (lambda ()
                            (invert-face 'mode-line)

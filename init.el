@@ -41,13 +41,13 @@
 ;; From here all the "things" to do are inside the "settings" directory
 ;; Add that directory to the load-path and require the modules...
 (add-to-list 'load-path (expand-file-name "settings" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "manually-downloaded" user-emacs-directory))
+(add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 (require 'settings-global)
 (require 'settings-appearance)
 (require 'settings-keyboard)
 (require 'settings-packages)
 (require 'settings-languages)
-
-(add-to-list 'load-path (expand-file-name "manually-downloaded" user-emacs-directory))
 
 ;;;; THE FOLLOWING LINES ARE ADDED AUTOMATICALLY AT THE END
 ;;;; ======================================================

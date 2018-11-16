@@ -10,12 +10,6 @@
   :delight auto-revert-mode)
 
 (use-package delight :ensure t)
-
-(use-package doom-themes :ensure t
-  :config
-  (load-theme 'doom-molokai t)
-  (doom-themes-visual-bell-config))
-
 (use-package evil :ensure t)
 
 (use-package expand-region :ensure t
