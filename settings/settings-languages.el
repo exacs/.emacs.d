@@ -18,6 +18,10 @@
   :mode (("\\.groovy$" . groovy-mode)
          ("\\.gradle" . groovy-mode)))
 
+(use-package restclient :ensure t
+  :commands (restclient-mode)
+  :mode (("\\.rest-client" . restclient-mode)))
+
 (use-package web-mode
   :ensure t
   :commands (web-mode)
