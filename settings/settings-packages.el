@@ -10,7 +10,9 @@
   :delight auto-revert-mode)
 
 (use-package delight :ensure t)
-(use-package evil :ensure t)
+(use-package evil :ensure t
+  :config
+  :delight evil-mode)
 
 (use-package expand-region :ensure t
   :bind (("C-=" . 'er/expand-region)))

@@ -18,6 +18,18 @@
   :mode (("\\.groovy$" . groovy-mode)
          ("\\.gradle" . groovy-mode)))
 
+;; (use-package js2-mode :ensure t
+;;   :init
+;;   (setq-default js2-show-parse-errors nil)
+;;   (setq-default js2-strict-missing-semi-warning nil)
+;;   (setq-default js2-basic-offset 2)
+;;   :config
+;;   :mode (("\\.js$" . js2-mode)))
+
+;;(use-package js2-refactor :ensure t
+;;  :hook js2-mode)
+
+
 (use-package restclient :ensure t
   :commands (restclient-mode)
   :mode (("\\.rest-client" . restclient-mode)))
