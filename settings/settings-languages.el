@@ -2,6 +2,12 @@
   :mode (("\\.el\\$" . elisp-mode))
   :delight eldoc-mode)
 
+(use-package elixir-mode
+  :ensure t
+  :commands (elixir-mode)
+  :mode (("\\.ex" . elixir-mode)
+         ("\\.exs" . elixir-mode)))
+
 (use-package markdown-mode
   :ensure t
   :commands (markdown-mode gfm-mode)
