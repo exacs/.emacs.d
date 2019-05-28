@@ -11,7 +11,9 @@
 
 (use-package delight :ensure t)
 (use-package evil :ensure t
+  :init
   :config
+  (evil-mode 1)
   :delight evil-mode)
 
 (use-package expand-region :ensure t
