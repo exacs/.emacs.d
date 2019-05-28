@@ -55,7 +55,9 @@
   :bind (("C-S-SPC" . 'set-rectangular-region-anchor)))
 
 (use-package projectile :ensure t
+  :init
   :config
+  (add-to-list 'projectile-globally-ignored-directories "*node_modules")
   (projectile-mode 1)
   (projectile-register-project-type 'npm '("package.json")
                   :compile "npm install"
