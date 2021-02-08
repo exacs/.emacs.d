@@ -10,6 +10,12 @@
   :delight auto-revert-mode)
 
 (use-package delight :ensure t)
+
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+
 (use-package evil :ensure t
   :init
   :config

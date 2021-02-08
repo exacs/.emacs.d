@@ -34,23 +34,26 @@
 
 ;;(use-package js2-refactor :ensure t
 ;;  :hook js2-mode)
-
+(use-package rjsx-mode :ensure t
+  :commands (rjsx-mode)
+  :mode (("\\.js$" . rjsx-mode)
+         ("\\.jsx$" . rjsx-mode)))
 
 (use-package restclient :ensure t
   :commands (restclient-mode)
   :mode (("\\.rest-client" . restclient-mode)))
 
-(use-package web-mode
-  :ensure t
-  :commands (web-mode)
-  :init
-  (setq-default web-mode-enable-auto-quoting nil)
-  (setq-default web-mode-attr-indent-offset 2)
-  (setq-default web-mode-markup-indent-offset 2)
-  (setq-default web-mode-css-indent-offset 2)
-  (setq-default web-mode-code-indent-offset 2)
-  :mode (("\\.js$" . web-mode)
-         ("\\.jsx$" . web-mode)
-         ("\\.json$" . web-mode)))
+;; (use-package web-mode
+;;   :ensure t
+;;   :commands (web-mode)
+;;   :init
+;;   (setq-default web-mode-enable-auto-quoting nil)
+;;   (setq-default web-mode-attr-indent-offset 2)
+;;   (setq-default web-mode-markup-indent-offset 2)
+;;   (setq-default web-mode-css-indent-offset 2)
+;;   (setq-default web-mode-code-indent-offset 2)
+;;   :mode (("\\.js$" . web-mode)
+;;          ("\\.jsx$" . web-mode)
+;;          ("\\.json$" . web-mode)))
 
 (provide 'settings-languages)
